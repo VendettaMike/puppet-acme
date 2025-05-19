@@ -33,6 +33,7 @@ acme::renew_days: 30
 # Cert defaults
 acme::dh_param_size: 2048
 acme::key_size: 2048
+acme::key_mode: '0640'
 acme::ocsp_must_staple: false
 acme::purge_key_on_mismatch: false
 

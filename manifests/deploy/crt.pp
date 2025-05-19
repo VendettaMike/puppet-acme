@@ -23,6 +23,7 @@ define acme::deploy::crt (
   $cfg_dir = $acme::cfg_dir
   $crt_dir = $acme::crt_dir
   $key_dir = $acme::key_dir
+  $key_mode = $acme::key_mode
 
   $user = $acme::user
   $group = $acme::group
@@ -67,7 +68,7 @@ define acme::deploy::crt (
   concat { $crt_full_chain_with_key:
     owner => 'root',
     group => $group,
-    mode  => '0640',
+    mode  => $key_mode,
   }
 
   concat::fragment { "${name}_key":

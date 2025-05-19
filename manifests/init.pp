@@ -181,6 +181,7 @@ class acme (
   Integer $exec_timeout,
   String $group,
   Integer $key_size,
+  String $key_mode,
   Boolean $manage_packages,
   Boolean $ocsp_must_staple,
   String $path,
